@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin_5"
+    android:background="@drawable/border"
+    tools:context=".ChooseFlightActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_the_filename"
+            android:id="@+id/tie_filename"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_choose_file"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_gravity="end"
+        android:text="@string/choose_file"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_5"
+            android:text="@string/source"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tie_source_edit_text"
+                android:hint="@string/enter_source"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_5"
+            android:text="@string/destination"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tie_dest_edit_text"
+                android:hint="@string/enter_destination"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/available_seats"
+        android:id="@+id/tv_seats_available"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/margin_5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/departur_time"
+        android:id="@+id/tv_departure_time"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/margin_5"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_flight"
+        android:layout_gravity="bottom"
+        android:layout_margin="50dp"
+        android:id="@+id/btn_new_flight"/>
+</LinearLayout>

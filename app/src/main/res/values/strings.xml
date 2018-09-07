@@ -5,4 +5,25 @@
     <string name="flight_details">Flight Details</string>
     <string name="cancel_flight">Cancel Flight</string>
     <string name="new_user">New User</string>
+    <string name="passenger_code">Passenger Code</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="eats_only_halal_meat">Eats Only halal meat</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="user_detail">User Detail</string>
+    <string name="from_t_t_t_t_to_t_t_t_t_destination">From\t\t\t\t To \t\t\t\t Destination</string>
+    <string name="please_choose_seat">Please Choose Seat:</string>
+    <string name="confirm">Confirm</string>
+    <string name="enter_the_filename">Enter the filename</string>
+    <string name="choose_file">Choose File</string>
+    <string name="source">Source:</string>
+    <string name="enter_source">Enter Source</string>
+    <string name="destination">Destination</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="available_seats">Available Seats</string>
+    <string name="departur_time">Departur Time</string>
+    <string name="new_flight">New Flight</string>
+    <string name="file_name">File Name</string>
+    <string name="choose_date">Choose Date</string>
 </resources>

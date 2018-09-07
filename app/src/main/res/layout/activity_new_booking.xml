@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_5"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    tools:context=".NewBookingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:textSize="24sp"
+        android:background="@drawable/border"
+        android:text="@string/from_t_t_t_t_to_t_t_t_t_destination"
+        android:id="@+id/tv_from_to"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:textSize="24sp"
+            android:text="@string/from_t_t_t_t_to_t_t_t_t_destination"
+            android:id="@+id/tv_seats_available"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:textSize="24sp"
+            android:text="@string/from_t_t_t_t_to_t_t_t_t_destination"
+            android:id="@+id/tv_arrival_time"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/please_choose_seat"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_seat_selector"
+        android:layout_margin="@dimen/margin_5"
+        android:background="@drawable/border"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_confirm"
+        android:text="@string/confirm"
+        android:layout_margin="@dimen/margin_5"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_cancel"
+        android:text="@string/cancel"
+        android:layout_margin="@dimen/margin_5"/>
+
+</LinearLayout>
