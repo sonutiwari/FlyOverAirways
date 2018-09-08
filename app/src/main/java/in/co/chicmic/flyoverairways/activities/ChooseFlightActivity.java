@@ -72,7 +72,7 @@ public class ChooseFlightActivity extends AppCompatActivity implements View.OnCl
             mFileName.setError("Please enter filename");
         } else {
             String data = Utils.readFromFile(this, fileName);
-            Toast.makeText(this, data, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Operation Successful", Toast.LENGTH_LONG).show();
             updateUI(data);
         }
     }
@@ -80,11 +80,16 @@ public class ChooseFlightActivity extends AppCompatActivity implements View.OnCl
     private void updateUI(String data) {
         Gson gson = new Gson();
         FlightDataModel model = gson.fromJson(data, FlightDataModel.class);
-        mDepartureTV.setText( String.format(Locale.getDefault(), "Departure Date: %s", model.getDatetime()));
-        mSourceTV.setText(model.getSource());
-        mDestTV.setText(model.getDestination());
-        int seatsAvailable = getAvailableSeats(model);
-        mSeatsAvailable.setText(String.format(Locale.getDefault(), "Seats Available: %d", seatsAvailable));
+        if (model != null) {
+            mDepartureTV.setText(String.format(Locale.getDefault(), "Departure Date: %s", model.getDatetime()));
+            mSourceTV.setText(model.getSource());
+            mDestTV.setText(model.getDestination());
+            int seatsAvailable = getAvailableSeats(model);
+            mSeatsAvailable.setText(String.format(Locale.getDefault(), "Seats Available: %d", seatsAvailable));
+        } else
+        {
+            Toast.makeText(this, "Some error occured!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private int getAvailableSeats(FlightDataModel model) {
