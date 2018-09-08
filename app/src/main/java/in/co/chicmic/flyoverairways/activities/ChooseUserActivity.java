@@ -26,7 +26,6 @@ public class ChooseUserActivity extends AppCompatActivity implements ChooseUserL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_user);
         mTinyDB = new TinyDB(getApplicationContext());
-        setTitle(this.getClass().getSimpleName());
         setUpRecycler();
     }
 

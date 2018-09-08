@@ -10,20 +10,32 @@
         android:supportsRtl="true"
         android:name=".application.FlyOverAirways"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CustomerDetailsActivity" />
-        <activity android:name=".activities.NewUserInfoActivity" />
-        <activity android:name=".activities.ChooseUserActivity" />
-        <activity android:name=".activities.NewBookingActivity" />
-        <activity android:name=".activities.ChooseFlightActivity" />
-        <activity android:name=".activities.NewFlightActivity" />
-        <activity android:name=".activities.CancelFlightActivity"/>
+        <activity android:name=".activities.MainActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.CustomerDetailsActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.NewUserInfoActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.ChooseUserActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.NewBookingActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.ChooseFlightActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.NewFlightActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".activities.CancelFlightActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
     </application>
 
 </manifest>

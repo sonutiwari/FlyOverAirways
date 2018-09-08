@@ -42,7 +42,6 @@ public class NewBookingActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_booking);
-        setTitle(this.getClass().getSimpleName());
         initViews();
         setListeners();
         if (getIntent().getExtras() != null){
@@ -174,6 +173,7 @@ public class NewBookingActivity extends AppCompatActivity implements View.OnClic
             mModel.setSeats(seats);
             Utils.writeFile(this, FlyOverAirways.fileName, Utils.objectToJSONFlight(mModel));
             isSpinnerClicked = false;
+            Toast.makeText(this, "Seat Booked Successfully", Toast.LENGTH_SHORT).show();
             onBackPressed();
         } else {
             Toast.makeText(this, "Please Select Seat No", Toast.LENGTH_SHORT).show();

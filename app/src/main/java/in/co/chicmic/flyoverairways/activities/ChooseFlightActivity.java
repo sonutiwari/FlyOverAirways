@@ -33,7 +33,6 @@ public class ChooseFlightActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_flight);
-        setTitle(this.getClass().getSimpleName());
         initViews();
         setListeners();
         updateUI(Utils.readFromFile(this, FlyOverAirways.fileName));

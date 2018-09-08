@@ -25,7 +25,6 @@ public class NewUserInfoActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user_info);
-        setTitle(this.getClass().getSimpleName());
         mTinyDB = new TinyDB(getApplicationContext());
         initViews();
         setListeners();

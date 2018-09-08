@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tie_file_name"
-                android:hint="@string/enter_source"/>
+                android:hint="@string/file_name"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 

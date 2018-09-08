@@ -26,7 +26,6 @@ public class CustomerDetailsActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_details);
-        setTitle(this.getClass().getSimpleName());
         mTinyDB = new TinyDB(getApplicationContext());
         findViewById(R.id.btn_new_user).setOnClickListener(this);
         setUpRecycler();
