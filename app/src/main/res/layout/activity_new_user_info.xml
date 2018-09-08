@@ -22,6 +22,10 @@
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:id="@+id/tie_passenger_code"
+                android:maxLength="6"
+                android:maxLines="1"
                 android:hint="@string/passenger_code"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -34,6 +38,9 @@
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/tie_full_name"
+                android:maxLines="1"
                 android:hint="@string/full_name"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -47,11 +54,15 @@
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:id="@+id/tie_address"
+                android:imeOptions="actionDone"
                 android:hint="@string/address"/>
         </android.support.design.widget.TextInputLayout>
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/cb_halal"
             android:text="@string/eats_only_halal_meat"/>
     </LinearLayout>
 
@@ -59,6 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_save"
+        android:background="@drawable/border"
         android:text="@string/save"
         android:layout_margin="@dimen/margin_5"/>
 
@@ -67,6 +79,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_cancel"
         android:text="@string/cancel"
+        android:background="@drawable/cancel_button_border"
         android:layout_margin="@dimen/margin_5"/>
 
 </LinearLayout>

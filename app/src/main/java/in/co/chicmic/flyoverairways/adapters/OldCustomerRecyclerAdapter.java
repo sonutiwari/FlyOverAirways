@@ -11,13 +11,20 @@ import java.util.List;
 
 import in.co.chicmic.flyoverairways.R;
 import in.co.chicmic.flyoverairways.dataModels.CustomerDetails;
+import in.co.chicmic.flyoverairways.listeners.ChooseUserListener;
 
 public class OldCustomerRecyclerAdapter extends
         RecyclerView.Adapter<OldCustomerRecyclerAdapter.ViewHolder> {
-    List<CustomerDetails> mCustomerDetailsList;
+    private List<CustomerDetails> mCustomerDetailsList;
+    private ChooseUserListener mListener;
 
     public OldCustomerRecyclerAdapter(List<CustomerDetails> pCustomerDetailsList){
         mCustomerDetailsList = pCustomerDetailsList;
+    }
+
+    public OldCustomerRecyclerAdapter(List<CustomerDetails> pCustomerDetailsList, ChooseUserListener pListner){
+        mCustomerDetailsList = pCustomerDetailsList;
+        mListener = pListner;
     }
 
     @NonNull
@@ -29,10 +36,18 @@ public class OldCustomerRecyclerAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int position) {
         CustomerDetails customerDetails = mCustomerDetailsList.get(position);
         viewHolder.mFullNameTV.setText(customerDetails.getFullName());
         viewHolder.mPassCodeTV.setText(String.valueOf(customerDetails.getPassengerCode()));
+        if (mListener != null){
+            viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mListener.viewClickAtPosition(viewHolder.getAdapterPosition());
+                }
+            });
+        }
     }
 
     @Override
@@ -43,8 +58,10 @@ public class OldCustomerRecyclerAdapter extends
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView mFullNameTV;
         TextView mPassCodeTV;
+        View view;
         ViewHolder(@NonNull View itemView) {
             super(itemView);
+            view = itemView;
             mFullNameTV = itemView.findViewById(R.id.tv_full_name);
             mPassCodeTV = itemView.findViewById(R.id.tv_pass_code);
         }

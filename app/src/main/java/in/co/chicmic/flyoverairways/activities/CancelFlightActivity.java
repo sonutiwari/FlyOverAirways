@@ -25,6 +25,7 @@ public class CancelFlightActivity extends AppCompatActivity implements CancelFli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancel_flight);
+        setTitle(this.getClass().getSimpleName());
         setUpRecycler();
     }
 

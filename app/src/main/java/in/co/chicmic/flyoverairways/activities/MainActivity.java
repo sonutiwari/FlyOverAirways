@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, CustomerDetailsActivity.class));
                 break;
             case R.id.btn_new_flight:
-                startActivity(new Intent(this, NewFlightActivity.class));
+                startActivity(new Intent(this, ChooseUserActivity.class));
                 break;
             case R.id.btn_cancel_flight:
                 startActivity(new Intent(this, CancelFlightActivity.class));

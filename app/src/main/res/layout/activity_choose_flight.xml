@@ -34,7 +34,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/margin_5"
@@ -42,16 +42,13 @@
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <android.support.design.widget.TextInputLayout
+        <TextView
             android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tie_source_edit_text"
-                android:hint="@string/enter_source"/>
-        </android.support.design.widget.TextInputLayout>
+            android:text="@string/source"
+            android:layout_margin="@dimen/margin_5"
+            android:id="@+id/tv_source"/>
     </LinearLayout>
 
     <LinearLayout
@@ -60,7 +57,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="@dimen/margin_5"
@@ -68,16 +65,13 @@
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <android.support.design.widget.TextInputLayout
+        <TextView
             android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tie_dest_edit_text"
-                android:hint="@string/enter_destination"/>
-        </android.support.design.widget.TextInputLayout>
+            android:text="@string/destination"
+            android:layout_margin="@dimen/margin_5"
+            android:id="@+id/tv_dest"/>
     </LinearLayout>
 
     <TextView
