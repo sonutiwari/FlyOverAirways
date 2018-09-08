@@ -9,19 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomerDetailsActivity" />
-        <activity android:name=".NewUserInfoActivity" />
-        <activity android:name=".ChooseUserActivity" />
-        <activity android:name=".NewBookingActivity" />
-        <activity android:name=".ChooseFlightActivity" />
-        <activity android:name=".NewFlightActivity"></activity>
+        <activity android:name=".activities.CustomerDetailsActivity" />
+        <activity android:name=".activities.NewUserInfoActivity" />
+        <activity android:name=".activities.ChooseUserActivity" />
+        <activity android:name=".activities.NewBookingActivity" />
+        <activity android:name=".activities.ChooseFlightActivity" />
+        <activity android:name=".activities.NewFlightActivity" />
+        <activity android:name=".activities.CancelFlightActivity"/>
     </application>
 
 </manifest>

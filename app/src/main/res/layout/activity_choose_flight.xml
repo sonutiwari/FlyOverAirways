@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_margin="@dimen/margin_5"
     android:background="@drawable/border"
-    tools:context=".ChooseFlightActivity">
+    tools:context=".activities.ChooseFlightActivity">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
