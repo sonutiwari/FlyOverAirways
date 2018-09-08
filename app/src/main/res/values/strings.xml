@@ -26,4 +26,5 @@
     <string name="new_flight">New Flight</string>
     <string name="file_name">File Name</string>
     <string name="choose_date">Choose Date</string>
+    <string name="seats_25">Seats : 25</string>
 </resources>
