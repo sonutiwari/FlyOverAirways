@@ -17,11 +17,11 @@ import in.co.chicmic.flyoverairways.listeners.CancelFlightClickListener;
 
 public class CancelFightRecyclerAdapter
         extends RecyclerView.Adapter<CancelFightRecyclerAdapter.ViewHolder>{
-    private List<Integer> mSeatStatus = new ArrayList<>();
-    private List<Integer> mPassengerCode = new ArrayList<>();
+    private ArrayList<Integer> mSeatStatus = new ArrayList<>();
+    private ArrayList<Integer> mPassengerCode = new ArrayList<>();
     private CancelFlightClickListener mListener;
 
-    public CancelFightRecyclerAdapter(List<Integer> pSeatStatus, CancelFlightClickListener pListener){
+    public CancelFightRecyclerAdapter(ArrayList<Integer> pSeatStatus, CancelFlightClickListener pListener){
         mListener = pListener;
         for (int i = 0; i < pSeatStatus.size() ; i++){
             if (pSeatStatus.get(i) != -1) {

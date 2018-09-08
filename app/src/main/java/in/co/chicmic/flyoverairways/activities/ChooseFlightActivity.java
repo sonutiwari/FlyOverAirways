@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Locale;
 
 import in.co.chicmic.flyoverairways.R;
+import in.co.chicmic.flyoverairways.application.FlyOverAirways;
 import in.co.chicmic.flyoverairways.dataModels.FlightDataModel;
 import in.co.chicmic.flyoverairways.utilities.Utils;
 
@@ -35,6 +36,7 @@ public class ChooseFlightActivity extends AppCompatActivity implements View.OnCl
         setTitle(this.getClass().getSimpleName());
         initViews();
         setListeners();
+        updateUI(Utils.readFromFile(this, FlyOverAirways.fileName));
     }
 
     private void initViews() {

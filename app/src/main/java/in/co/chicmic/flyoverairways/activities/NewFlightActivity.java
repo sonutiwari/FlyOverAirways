@@ -25,6 +25,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import in.co.chicmic.flyoverairways.R;
+import in.co.chicmic.flyoverairways.application.FlyOverAirways;
 import in.co.chicmic.flyoverairways.dataModels.FlightDataModel;
 import in.co.chicmic.flyoverairways.utilities.Utils;
 
@@ -91,7 +92,6 @@ public class NewFlightActivity extends AppCompatActivity
             mFileNameTIE.setError("Please enter file name.");
         }
         if (validFileName(fileName)){
-            //data = "\"source\":\"" + source + "\", \"destination
             ArrayList<Integer> seats = new ArrayList<>();
             for (int i = 0; i < 30; i++){
                 seats.add(-1);
@@ -104,7 +104,9 @@ public class NewFlightActivity extends AppCompatActivity
             model.setDestination(dest);
             Gson gson = new Gson();
             data = gson.toJson(model);
+            Log.e("Sonu", data );
             Utils.writeFile(this, fileName, data);
+            FlyOverAirways.fileName = fileName;
             String ret = Utils.readFromFile(this, fileName);
             Toast.makeText(this, ret, Toast.LENGTH_LONG).show();
             onBackPressed();

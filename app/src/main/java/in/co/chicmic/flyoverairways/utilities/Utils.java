@@ -3,12 +3,16 @@ package in.co.chicmic.flyoverairways.utilities;
 import android.content.Context;
 import android.util.Log;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+
+import in.co.chicmic.flyoverairways.dataModels.FlightDataModel;
 
 public class Utils {
     public static void writeFile(Context context, String fileName, String data){
@@ -52,5 +56,15 @@ public class Utils {
         }
 
         return ret;
+    }
+
+    public static String objectToJSONFlight(FlightDataModel model){
+        Gson gson = new Gson();
+        return gson.toJson(model);
+    }
+
+    public static FlightDataModel jsonToFlightModel(String json){
+        Gson gson = new Gson();
+        return  gson.fromJson(json, FlightDataModel.class);
     }
 }
